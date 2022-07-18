@@ -1,20 +1,15 @@
-
-
-
-
-var rows = 3;
-var columns = 3;
+var rows = 4;
+var columns = 4;
 
 var currTile;
 var otherTile; //blank tile
 
 var turns = 0;
 
-//var imgOrder = ["1", "2", "3", "4", "5", "6", "7", "8", "9"];
+var imgOrder = ["1", "2", "3", "4", "5", "6", "7", "8", "9","10","11","12","13","14","15","16",];
 
 //change to be randomly shuffled at start of each game
-var imgOrder = shuffle(["4", "9", "3", "2", "5", "8", "1", "6", "7"]);
-
+//var imgOrder = shuffle(["1", "2", "3", "4", "5", "6", "7", "8", "9"]);
 
 
 function fun1(){
@@ -24,7 +19,7 @@ function fun1(){
                     //<img id="0-0" src="1.jpg">
                     let tile = document.createElement("img");
                     tile.id = r.toString() + "-" + c.toString();
-                    tile.src = imgOrder.shift() + ".jpg";
+                    tile.src = "img/"+ imgOrder.shift() + ".jpg";
         
                     //DRAG FUNCTIONALITY
                     tile.addEventListener("dragstart", dragStart);  //click an image to drag
@@ -70,7 +65,7 @@ function dragDrop() {
     otherTile = this; //this refers to the img tile being dropped on
 }
 function dragEnd() {
-    if (!otherTile.src.includes("9.jpg")) {
+    if (!otherTile.src.includes("16.jpg")) {
         return;
     }
 
@@ -117,8 +112,6 @@ function shuffle(array) {
         temp = array[i];
         array[i] = array[j];
         array[j] = temp;
-
     }
-
     return array;
 }

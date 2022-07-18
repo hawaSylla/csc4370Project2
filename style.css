@@ -22,8 +22,8 @@ body {
 }
 
 #board {
-    width: 360px;
-    height: 360px;
+    width: 480px;
+    height: 480px;
     background-color: palevioletred;
     border: 10px solid black;
     margin: 0 auto;
