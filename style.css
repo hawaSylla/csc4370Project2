@@ -30,6 +30,13 @@ body {
     display: flex;
     flex-wrap: wrap;
 }
+#butt{
+    border: none;
+    outline: none;
+    padding: 15px;
+    background: powderblue;
+    border-radius: 5px;
+}
 
 #board img {
     width: 120px;

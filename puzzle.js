@@ -6,20 +6,21 @@ var otherTile; //blank tile
 
 var turns = 0;
 
-var imgOrder = ["1", "2", "3", "4", "5", "6", "7", "8", "9","10","11","12","13","14","15","16",];
+//var imgOrder = ["1", "2", "3", "4", "5", "6", "7", "8", "9","10","11","12","13","14","15","16",];
 
 //change to be randomly shuffled at start of each game
-//var imgOrder = shuffle(["1", "2", "3", "4", "5", "6", "7", "8", "9"]);
+var imgOrder = shuffle(["1", "2", "3", "4", "5", "6", "7", "8", "9","10","11","12","13","14","15","16",]);
 
+var hold = Math.floor(Math.random() * 4+1);
 
 function fun1(){
     for (let r=0; r < rows; r++) {
                 for (let c=0; c < columns; c++) {
-        
+                    
                     //<img id="0-0" src="1.jpg">
                     let tile = document.createElement("img");
                     tile.id = r.toString() + "-" + c.toString();
-                    tile.src = "img/"+ imgOrder.shift() + ".jpg";
+                    tile.src = "img/"+ hold + imgOrder.shift() + ".jpg";
         
                     //DRAG FUNCTIONALITY
                     tile.addEventListener("dragstart", dragStart);  //click an image to drag
