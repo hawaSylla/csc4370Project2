@@ -1,3 +1,11 @@
+var second = 0;
+    function pad ( value ) { return value > 9 ? value : "0" + value; }
+    setInterval( function(){
+        document.getElementById("seconds").innerHTML=pad(++second%60);
+        document.getElementById("minutes").innerHTML=pad(parseInt(second/60,10));
+    }, 1000);
+
+
 var rows = 4;
 var columns = 4;
 
